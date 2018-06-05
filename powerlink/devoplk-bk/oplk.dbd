@@ -1,8 +1,0 @@
-device(bi,         INST_IO, oplkBi,         "oplk")
-device(bo,         INST_IO, oplkBo,         "oplk")
-#device(bi,         INST_IO, s7plcStat,  "S7plc stat")
-device(ao,         INST_IO, oplkAo,      "oplk")
-device(ai,         INST_IO, oplkAi,      "oplk")
-driver(oplk) 
-registrar(oplkRegister)
-variable(oplkDebug, int)
