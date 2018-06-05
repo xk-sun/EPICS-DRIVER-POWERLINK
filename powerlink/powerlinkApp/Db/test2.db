@@ -1,0 +1,63 @@
+record(ai, "$(oplkcn-name):ai-int8-1") {
+  field (DTYP, "oplk")
+  field (INP,  "@$(oplkcn-name)/0 'T=INT8 L=0 H=10'")
+  field (EGUF, "10")
+  field (EGUL, "0")
+  field (LINR, "LINEAR")
+  field (SCAN, "I/O Intr")
+}
+
+record(ao, "$(oplkcn-name):ao-int8-1") {
+  field (DTYP, "oplk")
+  field (OUT,  "@$(oplkcn-name)/0 'T=INT8'")
+  field (SCAN, "I/O Intr")
+}
+
+record(bi, "$(oplkcn-name):bi-int8-1") {
+  field (DTYP,  "oplk")
+  field (INP,  "@$(oplkcn-name)/0 'T=INT8 B=1'")
+  field (SCAN, "I/O Intr")
+  field (ZNAM, "oplk-Off")
+  field (ONAM, "oplk-ON")
+}
+
+#record(bo, "$(oplkcn-name):bo-int8-1") {
+ #field (DTYP,  "oplk")
+ #field (OUT,  "@$(oplkcn-name)/0 'T=INT8 B=2'")
+ #field (SCAN, "I/O Intr")
+ #field (ZNAM, "oplk-Off")
+ #field (ONAM, "oplk-ON")
+#}
+
+#record(bi, "$(oplkcn-name):bi-int8-2") {
+  #field (DTYP,  "oplk")
+  #field (INP,  "@$(oplkcn-name)/1 'T=INT8 B=2'")
+  #field (SCAN, "I/O Intr")
+  #field (ZNAM, "oplk-Off")
+  #field (ONAM, "oplk-ON")
+#}
+
+
+#record(bo, "$(oplkcn-name):bo-int8-2") {
+ #field (DTYP,  "oplk")
+ #field (OUT,  "@$(oplkcn-name)/1 'T=INT8 B=3'")
+ #field (SCAN, "I/O Intr")
+ #field (ZNAM, "oplk-Off")
+ #field (ONAM, "oplk-ON")
+#}
+
+#record(ai, "$(oplkcn-name):ai-int8-2") {
+  #field (DTYP, "oplk")
+  #field (INP,  "@$(oplkcn-name)/1 'T=INT8 L=0 H=10'")
+  #field (EGUF, "10")
+  #field (EGUL, "0")
+  #field (LINR, "LINEAR")
+  #field (SCAN, "I/O Intr")
+#}
+
+#record(ao, "$(oplkcn-name):ao-int8-2") {
+  #field(DTYP, "oplk")
+  #field(OUT,  "@$(oplkcn-name)/1 'T=INT8'")
+  #field (SCAN, "I/O Intr")
+#}
+

@@ -1,0 +1,20 @@
+powerlink_registerRecordDeviceDriver.o: \
+ powerlink_registerRecordDeviceDriver.cpp \
+ /home/test/epics/base/include/epicsStdlib.h \
+ /home/test/epics/base/include/shareLib.h \
+ /home/test/epics/base/include/os/Linux/osdStrtod.h \
+ /home/test/epics/base/include/iocsh.h \
+ /home/test/epics/base/include/shareLib.h \
+ /home/test/epics/base/include/iocshRegisterCommon.h \
+ /home/test/epics/base/include/registryCommon.h \
+ /home/test/epics/base/include/dbStaticLib.h \
+ /home/test/epics/base/include/dbFldTypes.h \
+ /home/test/epics/base/include/dbBase.h \
+ /home/test/epics/base/include/epicsTypes.h \
+ /home/test/epics/base/include/ellLib.h \
+ /home/test/epics/base/include/dbDefs.h \
+ /home/test/epics/base/include/link.h \
+ /home/test/epics/base/include/errMdef.h \
+ /home/test/epics/base/include/cantProceed.h \
+ /home/test/epics/base/include/registryRecordType.h \
+ /home/test/epics/base/include/recSup.h

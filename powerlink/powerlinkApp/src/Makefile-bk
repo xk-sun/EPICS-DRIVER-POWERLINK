@@ -1,0 +1,83 @@
+TOP=../..
+
+include $(TOP)/configure/CONFIG
+#----------------------------------------
+#  ADD MACRO DEFINITIONS AFTER THIS LINE
+
+# Build the IOC application
+
+PROD_IOC = testS7plc
+# testS7plc.dbd will be created and installed
+DBD += testS7plc.dbd
+
+# testS7plc.dbd will be made up from these files:
+testS7plc_DBD += base.dbd
+
+# testS7plc_registerRecordDeviceDriver.cpp derives from testS7plc.dbd
+testS7plc_SRCS += testS7plc_registerRecordDeviceDriver.cpp
+
+# Build the main IOC entry point on workstation OSs.
+testS7plc_SRCS_DEFAULT += testS7plcMain.cpp
+testS7plc_SRCS_vxWorks += -nil-
+
+# Add support from base/src/vxWorks if needed
+#testS7plc_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
+
+
+
+ifneq ($(S7PLC),)
+    testS7plc_DBD += s7plc.dbd
+    
+    oplkmn_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/lib/linux/x86_64
+    testS7plc_LIBS += oplkmn
+
+    oplkmn_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmn
+    testS7plc_LIBS += oplkmn
+
+    oplkmnapp-kernelintf_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmnapp-kernelintf
+    testS7plc_LIBS += oplkmnapp-kernelintf
+
+    oplkmnapp-userintf_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmnapp-userintf
+    testS7plc_LIBS += oplkmnapp-userintf
+
+    oplkmndrv-pcap_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmndrv-pcap
+    testS7plc_LIBS += oplkmndrv-pcap
+
+    testS7plc_LIBS += s7plc
+endif
+
+#oplkmn_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/lib/linux/x86_64
+#testS7plc_LIBS += oplkmn
+
+#oplkmn_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmn
+#testS7plc_LIBS += oplkmn
+
+#oplkmnapp-kernelintf_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmnapp-kernelintf
+#testS7plc_LIBS += oplkmnapp-kernelintf
+
+#oplkmnapp-userintf_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmnapp-userintf
+#testS7plc_LIBS += oplkmnapp-userintf
+
+#oplkmndrv-pcap_DIR = /home/oplk-dev/work/openPOWERLINK-V2.2.2/stack/build/linux/proj/linux/liboplkmndrv-pcap
+#testS7plc_LIBS += oplkmndrv-pcap
+
+#pthread_DIR = /usr/lib/x86_64-linux-gnu
+#testS7plc_LIBS += pthread
+#rt_DIR = /usr/lib/x86_64-linux-gnu
+#testS7plc_LIBS += rt
+#pcap_DIR = /usr/lib/x86_64-linux-gnu
+#testS7plc_LIBS += pcap
+testS7plc_SYS_LIBS += pthread
+testS7plc_SYS_LIBS += rt
+testS7plc_SYS_LIBS += pcap
+
+# Finally link to the EPICS Base libraries
+testS7plc_LIBS += $(EPICS_BASE_IOC_LIBS)
+
+#=============================
+
+include $(TOP)/configure/RULES
+#----------------------------------------
+#  ADD RULES AFTER THIS LINE
+
+

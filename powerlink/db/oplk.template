@@ -1,0 +1,4 @@
+file db/test2.db {
+   pattern { oplkcn-name }
+        { "testcn:1" }
+}

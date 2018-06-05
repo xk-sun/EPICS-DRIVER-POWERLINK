@@ -1,0 +1,43 @@
+drvS7plc.o: ../drvS7plc.c /hls/epics/base-3.14.12.2/include/drvSup.h \
+ /hls/epics/base-3.14.12.2/include/errMdef.h \
+ /hls/epics/base-3.14.12.2/include/shareLib.h \
+ /hls/epics/base-3.14.12.2/include/devLib.h \
+ /hls/epics/base-3.14.12.2/include/devLibVME.h \
+ /hls/epics/base-3.14.12.2/include/dbDefs.h \
+ /hls/epics/base-3.14.12.2/include/os/Linux/osdVME.h \
+ /hls/epics/base-3.14.12.2/include/devLib.h \
+ /hls/epics/base-3.14.12.2/include/devLibVMEImpl.h \
+ /hls/epics/base-3.14.12.2/include/errlog.h \
+ /hls/epics/base-3.14.12.2/include/compilerDependencies.h \
+ /hls/epics/base-3.14.12.2/include/epicsVersion.h ../drvS7plc.h \
+ /hls/epics/base-3.14.12.2/include/dbScan.h \
+ /hls/epics/base-3.14.12.2/include/menuScan.h \
+ /hls/epics/base-3.14.12.2/include/dbAccess.h \
+ /hls/epics/base-3.14.12.2/include/epicsTime.h \
+ /hls/epics/base-3.14.12.2/include/epicsTypes.h \
+ /hls/epics/base-3.14.12.2/include/os/Linux/osdTime.h \
+ /hls/epics/base-3.14.12.2/include/caeventmask.h \
+ /hls/epics/base-3.14.12.2/include/dbFldTypes.h \
+ /hls/epics/base-3.14.12.2/include/link.h \
+ /hls/epics/base-3.14.12.2/include/dbBase.h \
+ /hls/epics/base-3.14.12.2/include/ellLib.h \
+ /hls/epics/base-3.14.12.2/include/dbAddr.h \
+ /hls/epics/base-3.14.12.2/include/dbLock.h \
+ /hls/epics/base-3.14.12.2/include/dbAccessDefs.h \
+ /hls/epics/base-3.14.12.2/include/dbCa.h \
+ /hls/epics/base-3.14.12.2/include/dbCommon.h \
+ /hls/epics/base-3.14.12.2/include/epicsMutex.h \
+ /hls/epics/base-3.14.12.2/include/epicsAssert.h \
+ /hls/epics/base-3.14.12.2/include/os/Linux/osdMutex.h \
+ /hls/epics/base-3.14.12.2/include/db_field_log.h \
+ /hls/epics/base-3.14.12.2/include/iocsh.h \
+ /hls/epics/base-3.14.12.2/include/cantProceed.h \
+ /hls/epics/base-3.14.12.2/include/epicsMutex.h \
+ /hls/epics/base-3.14.12.2/include/epicsThread.h \
+ /hls/epics/base-3.14.12.2/include/os/Linux/osdThread.h \
+ /hls/epics/base-3.14.12.2/include/shareLib.h \
+ /hls/epics/base-3.14.12.2/include/epicsTimer.h \
+ /hls/epics/base-3.14.12.2/include/epicsThread.h \
+ /hls/epics/base-3.14.12.2/include/epicsEvent.h \
+ /hls/epics/base-3.14.12.2/include/os/Linux/osdEvent.h \
+ /hls/epics/base-3.14.12.2/include/epicsExport.h

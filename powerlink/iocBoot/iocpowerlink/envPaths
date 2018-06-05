@@ -1,0 +1,5 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocpowerlink")
+epicsEnvSet("TOP","/home/test/epics/modules/powerlink")
+epicsEnvSet("oplk","/home/test/epics/base/../modules/powerlink")
+epicsEnvSet("EPICS_BASE","/home/test/epics/base")
